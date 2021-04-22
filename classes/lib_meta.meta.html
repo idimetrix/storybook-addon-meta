@@ -68,6 +68,55 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#properties" id="properties" style="color: inherit; text-decoration: none;">
+							<h2>Properties</h2>
+						</a>
+						<pre><code class="language-js"><span style="color: #000000">    </span><span style="color: #001080">static</span><span style="color: #000000"> </span><span style="color: #795E26">componentPath</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">: </span><span style="color: #001080">any</span><span style="color: #000000">): </span><span style="color: #001080">string</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #001080">static</span><span style="color: #000000"> </span><span style="color: #795E26">componentName</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">: </span><span style="color: #001080">any</span><span style="color: #000000">): </span><span style="color: #001080">string</span><span style="color: #000000">;</span>
+</code></pre>
+					</div>
+					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+						<h2>Usage</h2>
+					</a>
+					<a href="#es-module" id="es-module" style="color: inherit; text-decoration: none;">
+						<h3>es module</h3>
+					</a>
+					<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Meta</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;storybook-addon-meta&#039;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">path</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentPath</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component path</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">name</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentName</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component name</span>
+</code></pre>
+					<a href="#commonjs" id="commonjs" style="color: inherit; text-decoration: none;">
+						<h3>commonjs</h3>
+					</a>
+					<pre><code class="language-js"><span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">Meta</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;storybook-addon-meta&#039;</span><span style="color: #000000">).</span><span style="color: #001080">Meta</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">path</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentPath</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component path</span>
+<span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">name</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentName</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component name</span>
+</code></pre>
+					<a href="#demo" id="demo" style="color: inherit; text-decoration: none;">
+						<h2><a href="https://storybook-addon-meta.netlify.app/">Demo</a></h2>
+					</a>
+					<a href="#try-online-demo" id="try-online-demo" style="color: inherit; text-decoration: none;">
+						<h3><a href="https://storybook-addon-meta.netlify.app/">Try online demo</a></h3>
+					</a>
+					<a href="#es-module-1" id="es-module-1" style="color: inherit; text-decoration: none;">
+						<h3>es module</h3>
+					</a>
+					<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">path</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentPath</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component path</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">name</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentName</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component name</span>
+</code></pre>
+					<a href="#commonjs-1" id="commonjs-1" style="color: inherit; text-decoration: none;">
+						<h3>commonjs</h3>
+					</a>
+					<pre><code class="language-js"><span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">path</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentPath</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component path</span>
+<span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">name</span><span style="color: #000000"> = </span><span style="color: #001080">Meta</span><span style="color: #000000">.</span><span style="color: #795E26">componentName</span><span style="color: #000000">(</span><span style="color: #001080">component</span><span style="color: #000000">); </span><span style="color: #008000">// return component name</span>
+</code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -125,7 +174,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idimetrix/storybook-addon-meta/blob/0ca5fff/src/lib/Meta.ts#L20">lib/Meta.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/lib/Meta.ts#L31">lib/Meta.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -148,7 +197,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/idimetrix/storybook-addon-meta/blob/0ca5fff/src/lib/Meta.ts#L6">lib/Meta.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/lib/Meta.ts#L17">lib/Meta.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>

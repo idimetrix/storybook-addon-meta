@@ -51,6 +51,10 @@
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
+					"comment": {
+						"shortText": "[[include:meta/properties.md]]",
+						"text": "[[include:meta.md]]\n\n[[include:meta/usage.md]]\n\n[[include:meta/demo.md]]\n\n"
+					},
 					"children": [
 						{
 							"id": 10,
@@ -85,7 +89,7 @@
 							"sources": [
 								{
 									"fileName": "lib/Meta.ts",
-									"line": 20,
+									"line": 31,
 									"character": 29
 								}
 							],
@@ -128,7 +132,7 @@
 							"sources": [
 								{
 									"fileName": "lib/Meta.ts",
-									"line": 6,
+									"line": 17,
 									"character": 29
 								}
 							],
@@ -180,7 +184,7 @@
 					"sources": [
 						{
 							"fileName": "lib/Meta.ts",
-							"line": 5,
+							"line": 16,
 							"character": 17
 						}
 					]
