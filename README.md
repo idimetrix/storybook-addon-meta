@@ -151,7 +151,7 @@ var name = Meta.componentName(component); // return component name
 
 **Returns:** *string*
 
-Defined in: [lib/Meta.ts:31](https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/lib/Meta.ts#L31)
+Defined in: [lib/Meta.ts:31](https://github.com/idimetrix/storybook-addon-meta/blob/d30f325/src/lib/Meta.ts#L31)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 **Returns:** *string*
 
-Defined in: [lib/Meta.ts:17](https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/lib/Meta.ts#L17)
+Defined in: [lib/Meta.ts:17](https://github.com/idimetrix/storybook-addon-meta/blob/d30f325/src/lib/Meta.ts#L17)
 
 
 <a name="modulesmd"></a>
@@ -238,7 +238,7 @@ Re-exports: [Meta](#classeslib_metametamd)
 
 • `Const` **log**: Logger
 
-Defined in: [log.ts:3](https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/log.ts#L3)
+Defined in: [log.ts:3](https://github.com/idimetrix/storybook-addon-meta/blob/d30f325/src/log.ts#L3)
 
 
 <a name="modulestypes_declarationmd"></a>
