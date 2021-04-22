@@ -9,6 +9,9 @@
   - [Screenshot](#screenshot)
 - [Classes](#classes)
   - [Class: Meta](#class-meta)
+    - [Properties](#properties)
+    - [Usage](#usage)
+    - [Demo](#demo-1)
     - [Table of contents](#table-of-contents)
     - [Constructors](#constructors)
     - [Methods](#methods)
@@ -74,6 +77,47 @@ $ yarn add storybook-addon-meta
 
 [lib/Meta](#moduleslib_metamd).Meta
 
+### Properties
+
+```js
+    static componentPath(component: any): string;
+    static componentName(component: any): string;
+```
+
+### Usage
+
+#### es module
+```js
+import { Meta } from 'storybook-addon-meta'
+
+const path = Meta.componentPath(component); // return component path
+const name = Meta.componentName(component); // return component name
+```
+
+#### commonjs
+```js
+var Meta = require('storybook-addon-meta').Meta;
+
+var path = Meta.componentPath(component); // return component path
+var name = Meta.componentName(component); // return component name
+```
+
+### [Demo](https://storybook-addon-meta.netlify.app/)
+
+#### [Try online demo](https://storybook-addon-meta.netlify.app/)
+
+#### es module
+```js
+const path = Meta.componentPath(component); // return component path
+const name = Meta.componentName(component); // return component name
+```
+
+#### commonjs
+```js
+var path = Meta.componentPath(component); // return component path
+var name = Meta.componentName(component); // return component name
+```
+
 ### Table of contents
 
 #### Constructors
@@ -107,7 +151,7 @@ $ yarn add storybook-addon-meta
 
 **Returns:** *string*
 
-Defined in: [lib/Meta.ts:20](https://github.com/idimetrix/storybook-addon-meta/blob/0ca5fff/src/lib/Meta.ts#L20)
+Defined in: [lib/Meta.ts:31](https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/lib/Meta.ts#L31)
 
 ___
 
@@ -123,7 +167,7 @@ ___
 
 **Returns:** *string*
 
-Defined in: [lib/Meta.ts:6](https://github.com/idimetrix/storybook-addon-meta/blob/0ca5fff/src/lib/Meta.ts#L6)
+Defined in: [lib/Meta.ts:17](https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/lib/Meta.ts#L17)
 
 
 <a name="modulesmd"></a>
@@ -194,7 +238,7 @@ Re-exports: [Meta](#classeslib_metametamd)
 
 • `Const` **log**: Logger
 
-Defined in: [log.ts:3](https://github.com/idimetrix/storybook-addon-meta/blob/0ca5fff/src/log.ts#L3)
+Defined in: [log.ts:3](https://github.com/idimetrix/storybook-addon-meta/blob/c894199/src/log.ts#L3)
 
 
 <a name="modulestypes_declarationmd"></a>

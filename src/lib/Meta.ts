@@ -2,6 +2,17 @@ import { dirname } from 'path';
 
 import { log } from '../log';
 
+/**
+ *
+ * [[include:meta/properties.md]]
+ *
+ * [[include:meta.md]]
+ *
+ * [[include:meta/usage.md]]
+ *
+ * [[include:meta/demo.md]]
+ *
+ */
 export class Meta {
   public static componentPath(component: any): string {
     const file: string = component.options.__file
