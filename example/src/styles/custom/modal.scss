@@ -1,0 +1,14 @@
+.vm--modal {
+	background-color: #fff !important;
+	border-radius: 3px !important;
+	max-width: 100%;
+	padding: 35px;
+}
+
+.vm--overlay {
+	background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.vm--container {
+	z-index: 100000 !important;
+}

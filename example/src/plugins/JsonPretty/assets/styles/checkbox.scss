@@ -1,0 +1,60 @@
+@import './variables';
+
+.vjs-checkbox {
+	color: #1f2d3d;
+	left: -$selectabl-span;
+	position: absolute;
+	user-select: none;
+
+	&.is-checked .vjs-checkbox__inner {
+		background-color: $color-primary;
+		border-color: darken($color-primary, 10%);
+
+		&::after {
+			transform: rotate(45deg) scaleY(1);
+		}
+	}
+
+	.vjs-checkbox__inner {
+		background-color: #fff;
+		border: 1px solid $border-color;
+		border-radius: 2px;
+		box-sizing: border-box;
+		cursor: pointer;
+		display: inline-block;
+		height: 16px;
+		position: relative;
+		transition: border-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46), background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
+		vertical-align: middle;
+		width: 16px;
+		z-index: 1;
+
+		&::after {
+			border: 2px solid #fff;
+			border-left: 0;
+			border-top: 0;
+			box-sizing: content-box;
+			content: '';
+			height: 8px;
+			left: 4px;
+			position: absolute;
+			top: 1px;
+			transform: rotate(45deg) scaleY(0);
+			transform-origin: center;
+			transition: transform 0.15s cubic-bezier(0.71, -0.46, 0.88, 0.6) 0.5s;
+			width: 4px;
+		}
+	}
+
+	.vjs-checkbox__original {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		opacity: 0;
+		outline: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
+}

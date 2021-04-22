@@ -1,0 +1,55 @@
+@import './variables';
+
+.vjs-radio {
+	color: #1f2d3d;
+	left: -$selectabl-span;
+	position: absolute;
+	user-select: none;
+
+	&.is-checked .vjs-radio__inner {
+		background-color: $color-primary;
+		border-color: darken($color-primary, 10%);
+
+		&::after {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	.vjs-radio__inner {
+		background-color: #fff;
+		border: 1px solid $border-color;
+		border-radius: 100%;
+		box-sizing: border-box;
+		cursor: pointer;
+		display: inline-block;
+		height: 16px;
+		position: relative;
+		vertical-align: middle;
+		width: 16px;
+
+		&::after {
+			background-color: #fff;
+			border-radius: 100%;
+			content: '';
+			height: 4px;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			transition: transform 0.15s ease-in;
+			width: 4px;
+		}
+	}
+
+	.vjs-radio__original {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		opacity: 0;
+		outline: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
+}

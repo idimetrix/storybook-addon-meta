@@ -1,0 +1,3 @@
+{
+	"reject": ["vue-svgicon", "webpack", "sass-loader"]
+}

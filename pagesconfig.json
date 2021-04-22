@@ -1,0 +1,13 @@
+{
+  "groups": [
+    {
+      "title": "aaa",
+      "pages": [
+        {
+          "title": "Installation",
+          "path": "./documentation/installation.md"
+        }
+      ]
+    }
+  ]
+}

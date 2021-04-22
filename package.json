@@ -1,0 +1,144 @@
+{
+  "name": "storybook-addon-meta",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idimetrix/storybook-addon-meta.git"
+  },
+  "keywords": [
+    "Storybook",
+    "Addon",
+    "Meta",
+    "Vue",
+    "Vuex"
+  ],
+  "author": "Dmitry Selikhov",
+  "email": "selikhov.dmitrey@gmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/idimetrix/storybook-addon-meta/issues"
+  },
+  "homepage": "https://storybook-addon-meta.netlify.app/",
+  "description": "Meta information for Storybook components",
+  "main": "build/main/index.js",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
+  "scripts": {
+    "clean": "gh-pages-clean && rm -rf build README.md",
+    "build": "run-p build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"src/**/*.ts\" --write",
+    "fix:lint": "eslint src --ext .ts --fix",
+    "test": "run-s build test:*",
+    "test:lint": "eslint src --ext .ts",
+    "test:prettier": "prettier \"src/**/*.ts\" --list-different",
+    "test:spelling": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
+    "test:unit": "nyc --silent ava",
+    "check-cli": "run-s test diff-integration-tests check-integration-tests",
+    "check-integration-tests": "run-s check-integration-test:*",
+    "diff-integration-tests": "mkdir -p diff && rm -rf diff/test && cp -r test diff/test && rm -rf diff/test/test-*/.git && cd diff && git init --quiet && git add -A && git commit --quiet --no-verify --allow-empty -m 'WIP' && echo '\\n\\nCommitted most recent integration test output in the \"diff\" directory. Review the changes with \"cd diff && git diff HEAD\" or your preferred git diff viewer.'",
+    "watch:build": "tsc -p tsconfig.json -w",
+    "watch:test": "nyc --silent ava --watch",
+    "cov": "run-s build test:unit cov:html cov:lcov && open-cli coverage/index.html",
+    "cov:html": "nyc report --reporter=html",
+    "cov:lcov": "nyc report --reporter=lcov",
+    "cov:send": "run-s cov:lcov && codecov",
+    "cov:check": "nyc report && nyc check-coverage --lines 1 --functions 1 --branches 1",
+    "doc": "run-s doc:html && open-cli build/docs/index.html",
+    "doc:html": "typedoc src/ --readme documentation/README.md --exclude **/*.spec.ts --excludePrivate --plugin none --includes documentation --media documentation/media --out build/docs --gaID UA-179517743-1",
+    "doc:markdown": "typedoc src/ --readme documentation/README.md --exclude **/*.spec.ts --excludePrivate --theme markdown --includes documentation --media documentation/media --out build/markdown --gaID UA-179517743-1 && npm run concat-md",
+    "doc:json": "typedoc src/ --exclude **/*.spec.ts --excludePrivate --plugin none --json build/docs/typedoc.json",
+    "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs build/markdown",
+    "concat-md": "concat-md --toc --decrease-title-levels --dir-name-as-title build/markdown > README.md",
+    "version": "standard-version",
+    "heroku:example": "git subtree push --prefix example heroku master",
+    "commit": "git add -A && git commit -m 'deploy' --no-verify && git push origin HEAD",
+    "package": "node package.js > build/package.json",
+    "deploy": "npm run clean && run-s test cov:check doc:html doc:markdown doc:json version doc:publish && npm-run-all --sequential package commit && npm publish",
+    "ncu": "ncu -u --timeout 100000  && npm i && npm run fix"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "bech32": "^2.0.0",
+    "logvis": "^1.0.6",
+    "ripemd160": "^2.0.2",
+    "secp256k1": "^4.0.2",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^1.1.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/bech32": "^1.1.2",
+    "@types/loglevel": "^1.6.3",
+    "@types/ripemd160": "^2.0.0",
+    "@types/secp256k1": "^4.0.2",
+    "@types/vue": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "ava": "^3.15.0",
+    "codecov": "^3.8.1",
+    "concat-md": "^0.3.5",
+    "cspell": "^5.3.12",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-functional": "^3.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "gh-pages": "^3.1.0",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^15.1.0",
+    "open-cli": "^6.0.1",
+    "prettier": "^2.2.1",
+    "standard-version": "^9.2.0",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.20.35",
+    "typedoc-plugin-markdown": "^3.7.1",
+    "typescript": "^4.2.4"
+  },
+  "files": [
+    "build/main",
+    "build/module",
+    "build/package.json",
+    "!**/*.spec.*",
+    "!**/*.test.*",
+    "!**/*.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "ava": {
+    "failFast": true,
+    "timeout": "60s",
+    "typescript": {
+      "rewritePaths": {
+        "src/": "build/main/"
+      }
+    },
+    "files": [
+      "!build/module/**",
+      "!example/**"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "exclude": [
+      "**/*.spec.js"
+    ]
+  }
+}

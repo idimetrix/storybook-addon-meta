@@ -1,0 +1,64 @@
+@import './variables';
+
+$content-padding: 1em;
+
+@mixin mixin-value-style($color) {
+	color: $color;
+}
+
+.vjs-tree {
+	font-family: 'Monaco', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', monospace;
+	font-size: 14px;
+
+	&.is-root {
+		position: relative;
+
+		&.has-selectable-control {
+			margin-left: $selectabl-span;
+		}
+	}
+
+	&.is-mouseover {
+		background-color: $highlight-bg-color;
+	}
+
+	&.is-highlight-selected {
+		background-color: darken($highlight-bg-color, 5%);
+	}
+
+	.vjs-tree__content {
+		padding-left: $content-padding;
+
+		&.has-line {
+			border-left: 1px dotted $border-color;
+		}
+	}
+
+	.vjs-tree__brackets {
+		cursor: pointer;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	.vjs-comment {
+		color: $comment-color;
+	}
+
+	.vjs-value__null {
+		@include mixin-value-style($color-null);
+	}
+
+	.vjs-value__number {
+		@include mixin-value-style($color-number);
+	}
+
+	.vjs-value__boolean {
+		@include mixin-value-style($color-boolean);
+	}
+
+	.vjs-value__string {
+		@include mixin-value-style($color-string);
+	}
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Ubuntu+Mono&display=swap');
+
+@import 'reset';
+
+$animationDuration: 0.5s;
+@import '~vue2-animate/src/sass/vue2-animate';
+@import '~vue-js-modal/dist/styles.css';
+@import '~aos/dist/aos.css';
+@import '~flex.box';
+
+* {
+	box-sizing: border-box;
+	outline: 0;
+}
+
+html,
+body {
+	background: #f9f9f9;
+	color: #142533;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+a {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		border: 0;
+		color: inherit;
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+img {
+	outline: none;
+}
+
+#app {
+	margin: 0 auto;
+	max-width: 1480px;
+	padding: 20px;
+}
+
+[v-cloak] {
+	display: none !important;
+}
+
+*::-webkit-scrollbar {
+	height: 9px;
+	width: 9px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #e5e7eb;
+	border-radius: 4.5px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 4.5px;
+}
+
+@import 'svg';
+@import 'helpers';
+@import 'custom';
