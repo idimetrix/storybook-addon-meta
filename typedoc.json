@@ -1,0 +1,279 @@
+{
+	"id": 0,
+	"name": "storybook-addon-meta",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "index",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 15,
+					"name": "Meta",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 3
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						15
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "lib/Meta",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 3,
+					"name": "Meta",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"children": [
+						{
+							"id": 10,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 11,
+									"name": "new Meta",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 3,
+										"name": "Meta"
+									}
+								}
+							]
+						},
+						{
+							"id": 7,
+							"name": "componentName",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "lib/Meta.ts",
+									"line": 20,
+									"character": 29
+								}
+							],
+							"signatures": [
+								{
+									"id": 8,
+									"name": "componentName",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 9,
+											"name": "component",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							]
+						},
+						{
+							"id": 4,
+							"name": "componentPath",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "lib/Meta.ts",
+									"line": 6,
+									"character": 29
+								}
+							],
+							"signatures": [
+								{
+									"id": 5,
+									"name": "componentPath",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 6,
+											"name": "component",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								10
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								7,
+								4
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/Meta.ts",
+							"line": 5,
+							"character": 17
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						3
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/Meta.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 12,
+			"name": "log",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 13,
+					"name": "log",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "log.ts",
+							"line": 3,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Logger"
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						13
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "log.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 14,
+			"name": "types/declaration",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "types/declaration.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				2,
+				12,
+				14
+			]
+		}
+	]
+}
